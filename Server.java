@@ -32,7 +32,7 @@ public class Server extends UnicastRemoteObject implements Interface
 	public static int sock,length;
 	public static int ch=0;
 	public static Socket client[]=new Socket[100];
-	Connection con=DriverManager.getConnection("jdbc:odbc:Server","Nital","Nitalb95");
+	Connection con=DriverManager.getConnection("jdbc:odbc:Server",username,password);
 	Interface stub;
 	PreparedStatement st;
 	String db,clientSentence="\n";
