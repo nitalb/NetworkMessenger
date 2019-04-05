@@ -55,7 +55,7 @@ public class Server extends UnicastRemoteObject implements Interface
 			ts.stub=new Server();
 			Naming.rebind("rmi://127.0.0.1:11000/MessengerServer",ts.stub);   
 			Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
-			ts.con=DriverManager.getConnection("jdbc:odbc:Server","Nital","Nitalb95");
+			ts.con=DriverManager.getConnection("jdbc:odbc:Server",username,password);
 			ts.wSocket = new ServerSocket(6789);
 			while(true)
 			{	
